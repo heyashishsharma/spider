@@ -1,0 +1,139 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  padding: 4rem 2rem;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+.backgroundEffects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glowBlob {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, rgba(29, 78, 253, 0.15) 0%, rgba(220, 39, 67, 0.05) 50%, rgba(0, 0, 0, 0) 70%);
+  filter: blur(80px);
+  animation: pulse 8s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.1); opacity: 1; }
+}
+
+.glassForm {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  width: 100%;
+  padding: 3rem;
+  background: rgba(20, 20, 20, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #a0a0a0;
+  margin-bottom: 2.5rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #d0d0d0;
+}
+
+.input, .select, .textarea {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.input:focus, .select:focus, .textarea:focus {
+  outline: none;
+  border-color: rgba(220, 39, 67, 0.5);
+  box-shadow: 0 0 0 3px rgba(220, 39, 67, 0.15);
+}
+
+.textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.saveButton {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(45deg, #1d4efd 0%, #dc2743 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.saveButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(220, 39, 67, 0.3);
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.backLink {
+  color: #a0a0a0;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.backLink:hover {
+  color: #ffffff;
+}
